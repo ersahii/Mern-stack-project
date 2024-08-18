@@ -1,13 +1,17 @@
-require("dotenv").config();
-const express = require("express");
-const connectDb = require("./utils/db");
+import express from "express";
+import connectDb from "./utils/db.js";
+import router from "./router/auth-router.js"
+import errorMiddleware from "./middlewares/error-middleware.js";
+import contactRouter from "./router/message-router.js"
 const app = express();
-const port = 3000;
-const router = require("./router/auth-router")
+const PORT = 3000;
 app.use(express.json());
-app.use("/api/auth", router)
-connectDb().then(() => {
-    app.listen(port, () => {
-        console.log("Server started at port", port);
+app.use("/api/auth", router);
+app.use("/api/form" , contactRouter);
+app.use(express.urlencoded({extended: true}))
+app.use(errorMiddleware)
+connectDb().then(()=>{
+    app.listen(PORT ,()=>{
+        console.log(`Server started at port ${PORT}`);
     })
 });

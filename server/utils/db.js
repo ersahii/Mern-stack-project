@@ -1,12 +1,10 @@
-const mongoose = require("mongoose");
-// const URI = "mongodb://127.0.0.1:27017/mern_admin";
-// mongoose.connect(URI);
-// mern_admin is database name 
+import 'dotenv/config';
+import mongoose from "mongoose";
 const URI = process.env.MONGODB_URI;
 const connectDb = async ()=>{
     try{
         await mongoose.connect(URI);
-        console.log("Connected successfully to MongoDb");
+        console.log("Mongodb connected successfully");
     }
     catch(error){
         console.log(error)
@@ -14,4 +12,4 @@ const connectDb = async ()=>{
         process.exit(0);
     }
 }
-module.exports = connectDb;
+export default connectDb;
