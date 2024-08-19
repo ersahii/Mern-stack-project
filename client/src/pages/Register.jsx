@@ -5,7 +5,7 @@ const Register = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
-    phone: '',
+    phoneNo: '',
     email: ''
   });
 
@@ -21,6 +21,7 @@ const Register = () => {
     e.preventDefault();
     // Handle form submission logic here
     console.log('Form data submitted:', formData);
+    alert('Form data submitted:',formData  )
   };
 
   return (
@@ -55,8 +56,8 @@ const Register = () => {
             <input
               type="tel"
               id="phone"
-              name="phone"
-              value={formData.phone}
+              name="phoneNo"
+              value={formData.phoneNo}
               onChange={handleChange}
               required
             />
