@@ -9,7 +9,7 @@ body, ul {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 20px;
 }
 
 .container {
@@ -26,7 +26,9 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
 }
-
+.navLink{
+    font-size: 20px;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -55,6 +57,7 @@ nav ul li a:hover, nav ul li a.active {
     .container {
         flex-direction: column;
         align-items: flex-start;
+        align-items: center;
     }
 
     nav ul {
