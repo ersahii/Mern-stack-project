@@ -1,39 +1,26 @@
+// src/components/Profile.js
+
 import React from 'react';
-import '../styles/AboutSection.css';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Using react-icons for social media icons
+import "../styles/AboutSection.css"
+
 const About = () => {
-    return (
-        <section className="about-section">
-            <div className="container">
-                <div className="about-content">
-                    <img
-                        src="/images/mehraj.jpg" // Replace with your image URL
-                        alt="Mir Mehraj Mushtaq"
-                        className="profile-image"
-                    />
-                    <div className="text-content">
-                        <h1>Mir Mehraj Mushtaq</h1>
-                        <p className="role">MERN Stack Developer</p>
-                        <p>
-                            Hi! I'm Mir Mehraj Mushtaq, a passionate MERN Stack Developer with experience in creating dynamic web applications using MongoDB, Express.js, React, and Node.js.
-                        </p>
-                        <div className="social-media">
-                            <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
-                                <FaGithub />
-                            </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
-                                <FaLinkedin />
-                            </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
-                                <FaTwitter />
-                            </a>
-                        </div>
-                        <a href="#contact" className="hire-me-button">Hire Me</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <div className="profile-container">
+      <div className="personal-details">
+        <img src="images/mehraj.jpg" alt="Profile" className="profile-photo" />
+        <h2 className="profile-name">Mir Mehraj Mushtaq</h2>
+        <p className="profile-email">Email: mirmehrajmushtaq053@gmail.com</p>
+        <p className="profile-phone">Phone: (+91) 7006791254</p>
+      </div>
+
+      <div className="about-me">
+        <h3>About Me</h3>
+        <p>
+          Hi, I'm Mir Mehraj Mushtaq, a passionate MERN stack developer with extensive experience in MongoDB, Express.js, React, and Node.js. I specialize in creating dynamic and responsive web applications with a focus on performance and user experience. My journey in the tech field has equipped me with the skills to tackle complex challenges and deliver high-quality solutions.
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default About;
