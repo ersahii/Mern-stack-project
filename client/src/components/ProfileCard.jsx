@@ -6,10 +6,10 @@ import { FaGithubSquare } from "react-icons/fa";
 import HireMeButton from "./HireMeButton";
 const ProfileCard = () => {
     return (<>
-        <div class="profile-card">
-            <img src="./images/mehraj.jpg" alt="Profile Photo" class="profile-photo"></img>
-                <h2 class="profile-name">Mir Mehraj Mushtaq</h2>
-                <div class="social-links">
+        <div  className="profile-card">
+            <img src="./images/mehraj.jpg" alt="Profile Photo"  className="profile-photo"></img>
+                <h2  className="profile-name">Mir Mehraj Mushtaq</h2>
+                <div  className="social-links">
                     <NavLink href="#" target="_blank" className="social-link" aria-label="LinkedIn">
                     <FaLinkedin className="social-icon"/>
                     </NavLink>

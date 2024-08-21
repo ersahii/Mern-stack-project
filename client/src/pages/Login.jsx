@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react';
 import "../styles/LoginForm.css"
-
+import { useAuth } from '../store/auth';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const [formData, setFormData] = useState({
         email: '',
         password: ''
     });
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -15,7 +15,8 @@ const Login = () => {
             [name]: value
         });
     };
-
+    const navigate = useNavigate();
+    const {storeTokenToLocalStorage} = useAuth();
     const handleSubmit = async (e) => {
         // Handle form login logic here
         try {
@@ -27,13 +28,19 @@ const Login = () => {
                 },
                 body : JSON.stringify(formData),
             })
-            console.log("response:" , response);
+            // console.log("response:" , response);
             if(response.ok){
+                const resData = await response.json();
+                storeTokenToLocalStorage(resData.token);
                 setFormData({
                     email: '',
                     password: ''
                 });
                 alert(`Logged in successfully`);
+                navigate("/");
+            }
+            else{
+                alert("Error in login")
             }
             
         } catch (error) {

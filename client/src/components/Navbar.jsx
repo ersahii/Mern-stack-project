@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 const Navbar =()=>{
+    const isLoggedIn = true;
     return<>
         <header>
             <div className="container-navbar">
@@ -13,8 +14,11 @@ const Navbar =()=>{
                         <li><NavLink to="/about" className="navLink">About</NavLink></li>
                         <li><NavLink to="/contact" className="navLink">Contact</NavLink></li>
                         <li><NavLink to="/services" className="navLink">Services</NavLink></li>
-                        <li><NavLink to="/register" className="navLink">Register</NavLink></li>
-                        <li><NavLink to="/login" className="navLink">Login</NavLink></li>
+                        {isLoggedIn ? <li><NavLink to="/logout" className="navLink">Logout</NavLink></li> :
+                        <>
+                            <li><NavLink to="/register" className="navLink">Register</NavLink></li>
+                            <li><NavLink to="/login" className="navLink">Login</NavLink></li>
+                        </>}
                     </ul>
                 </nav>
             </div>

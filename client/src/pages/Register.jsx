@@ -1,6 +1,7 @@
 import "../styles/RegistrationForm.css"
 import React, { useState } from 'react';
 import {useNavigate} from "react-router-dom";
+import { useAuth } from "../store/auth";
 const Register = () => {
   const [formData, setFormData] = useState({
     username: '',
@@ -16,7 +17,7 @@ const navigate = useNavigate();
       [name]: value
     });
   };
-
+const {storeTokenToLocalStorage} =useAuth();
   const handleSubmit = async(e) => {
     // Handle form submission logic here
     try { 
@@ -29,6 +30,9 @@ const navigate = useNavigate();
         body:JSON.stringify(formData),
       });
       if(response.ok){
+        const resData = await response.json();
+        // console.log(resData.token)
+        storeTokenToLocalStorage(resData.token);
         setFormData({
           username: '',
           password: '',
