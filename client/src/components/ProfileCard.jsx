@@ -10,14 +10,14 @@ const ProfileCard = () => {
             <img src="./images/mehraj.jpg" alt="Profile Photo" class="profile-photo"></img>
                 <h2 class="profile-name">Mir Mehraj Mushtaq</h2>
                 <div class="social-links">
-                    <NavLink href="#" target="_blank" class="social-link" aria-label="LinkedIn">
-                    <FaLinkedin />
+                    <NavLink href="#" target="_blank" className="social-link" aria-label="LinkedIn">
+                    <FaLinkedin className="social-icon"/>
                     </NavLink>
-                    <NavLink href="#" target="_blank" class="social-link" aria-label="Twitter">
-                    <FaSquareXTwitter />
+                    <NavLink href="#" target="_blank" className="social-link" aria-label="Twitter">
+                    <FaSquareXTwitter className="social-icon"/>
                     </NavLink>
-                    <NavLink href="#" target="_blank" class="social-link" aria-label="GitHub">
-                    <FaGithubSquare />
+                    <NavLink href="#" target="_blank" className="social-link" aria-label="GitHub">
+                    <FaGithubSquare className="social-icon"/>
                     </NavLink>
                 </div>
                     <HireMeButton/>

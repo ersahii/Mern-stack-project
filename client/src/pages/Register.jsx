@@ -1,6 +1,6 @@
 import "../styles/RegistrationForm.css"
 import React, { useState } from 'react';
-
+import {useNavigate} from "react-router-dom";
 const Register = () => {
   const [formData, setFormData] = useState({
     username: '',
@@ -8,7 +8,7 @@ const Register = () => {
     phoneNo: '',
     email: ''
   });
-
+const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,13 +17,30 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Form data submitted:', formData);
-    alert('Form data submitted:',formData  )
-  };
-
+    try { 
+      const response = await fetch(`http://localhost:3000/api/auth/register`,{
+        method:"POST",
+        headers : {
+          "Content-Type": "application/json",
+        },
+        body:JSON.stringify(formData)
+      });
+      if(response.ok){
+        setFormData({
+          username: '',
+          password: '',
+          phoneNo: '',
+          email: ''
+        })
+        navigate("/login");
+      }
+    }catch (error) {
+      console.log("register error:", error)
+    }
+  }
   return (
     <div className="fullsize-container">
       <div className="form-wrapper">

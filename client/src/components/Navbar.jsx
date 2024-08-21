@@ -3,7 +3,7 @@ import "./navbar.css";
 const Navbar =()=>{
     return<>
         <header>
-            <div className="container">
+            <div className="container-navbar">
                 <div className="logo-brand">
                     <a href="/">Mir Mehraj Mushtaq</a>
                 </div>

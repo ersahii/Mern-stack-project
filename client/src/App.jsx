@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 const App = ()=>{
-  return <>
+  return <div className="App">
     <BrowserRouter>
     <Navbar/>
       <Routes>
@@ -21,6 +21,6 @@ const App = ()=>{
       </Routes>
       <Footer/>
     </BrowserRouter>
-  </>
+  </div>
 }
 export default App;

@@ -1,22 +1,12 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f2f5;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 .profile-card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    box-shadow: 0 4px 8px black;
+    max-width: 500px;
     text-align: center;
     overflow: hidden;
     margin: 20px;
-    padding: 20px;
+    padding:50px;
 }
 
 .profile-photo {
@@ -27,7 +17,7 @@ body {
 }
 
 .profile-name {
-    margin: 15px 0;
+    margin: 20px 0;
     font-size: 1.5em;
     color: #333;
 }
@@ -49,6 +39,6 @@ body {
 }
 
 .social-icon {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 }
