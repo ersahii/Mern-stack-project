@@ -16,10 +16,29 @@ const Login = () => {
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission (e.g., send data to a server)
-        console.log('Form submitted:', formData);
+    const handleSubmit = async (e) => {
+        // Handle form login logic here
+        try {
+            e.preventDefault();
+            const response = await fetch(`http://localhost:3000/api/auth/login`,{
+                method: "POST" , 
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body : JSON.stringify(formData),
+            })
+            console.log("response:" , response);
+            if(response.ok){
+                setFormData({
+                    email: '',
+                    password: ''
+                });
+                alert(`Logged in successfully`);
+            }
+            
+        } catch (error) {
+            console.log("login error: " , error)
+        }
     };
 
     return (
