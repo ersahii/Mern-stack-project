@@ -2,15 +2,14 @@
 
 import React from 'react';
 import "../styles/AboutSection.css"
+import HireMeButton from '../components/HireMeButton';
+import ProfileCard from '../components/ProfileCard';
 
 const About = () => {
   return (
     <div className="profile-container">
       <div className="personal-details">
-        <img src="images/mehraj.jpg" alt="Profile" className="profile-photo" />
-        <h2 className="profile-name">Mir Mehraj Mushtaq</h2>
-        <p className="profile-email">Email: mirmehrajmushtaq053@gmail.com</p>
-        <p className="profile-phone">Phone: (+91) 7006791254</p>
+      <ProfileCard/>
       </div>
 
       <div className="about-me">
