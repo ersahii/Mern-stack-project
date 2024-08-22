@@ -1,6 +1,8 @@
 import React from 'react';
 import "../styles/HomePage.css";
 import About from './About';
+import PackagesCard from '../components/PackagesCard';
+import Copy2Clipboard from '../components/CopyCodeBlock';
 const Home = () => {
     return (
         <>
@@ -11,9 +13,10 @@ const Home = () => {
                 <p className='brand-skills'>Mern Stack Developer</p>
             </div>
         <About/>
+        <PackagesCard/>
+        <Copy2Clipboard/>
         </div>
         </>
     );
 };
-
 export default Home;

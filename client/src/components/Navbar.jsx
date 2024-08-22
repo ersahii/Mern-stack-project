@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
 const Navbar =()=>{
-    const isLoggedIn = true;
+    const isLoggedIn = false;
     return<>
         <header>
             <div className="container-navbar">

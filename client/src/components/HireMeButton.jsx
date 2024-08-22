@@ -3,9 +3,7 @@ import './hireMeButton.css'; // Import your CSS for styling
 import { NavLink } from 'react-router-dom';
 const HireMeButton = () => {
   return (
-    <button className="hire-me-button">
-      Hire Me
-    </button>
+    <NavLink to="/contact" className="hire-me-button">Hire Me</NavLink>
   );
 };
 
