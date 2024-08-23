@@ -1,7 +1,6 @@
-
+import { useAuth } from '../store/auth';
 import React, { useState } from 'react';
 import "../styles/LoginForm.css"
-import { useAuth } from '../store/auth';
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -16,6 +15,7 @@ const Login = () => {
         });
     };
     const navigate = useNavigate();
+    const {isLoggedIn} = useAuth();
     const {storeTokenToLocalStorage} = useAuth();
     const handleSubmit = async (e) => {
         // Handle form login logic here
@@ -40,7 +40,7 @@ const Login = () => {
                 navigate("/");
             }
             else{
-                alert("Error in login")
+                navigate("/login");
             }
             
         } catch (error) {

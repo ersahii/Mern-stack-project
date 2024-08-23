@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
+import { useAuth } from "../store/auth";
 const Navbar =()=>{
-    const isLoggedIn = false;
+    const {isLoggedIn} = useAuth();
+    console.log(isLoggedIn);
     return<>
         <header>
             <div className="container-navbar">
                 <div className="logo-brand">
-                    <a href="/">Mir Mehraj Mushtaq</a>
+                    <NavLink to="/">Mir Mehraj Mushtaq</NavLink>
                 </div>
                 <nav>
                     <ul>
