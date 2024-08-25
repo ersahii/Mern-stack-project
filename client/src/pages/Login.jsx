@@ -37,7 +37,6 @@ const Login = () => {
                     password: ''
                 });
                 alert(`Logged in successfully`);
-                navigate("/");
             }
             else{
                 navigate("/login");

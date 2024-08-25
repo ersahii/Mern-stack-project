@@ -3,7 +3,6 @@ import "./navbar.css";
 import { useAuth } from "../store/auth";
 const Navbar =()=>{
     const {isLoggedIn} = useAuth();
-    console.log(isLoggedIn);
     return<>
         <header>
             <div className="container-navbar">
