@@ -1,0 +1,56 @@
+.intro-container{
+    
+}
+.intro{
+    display:block;
+    width:fit-content;
+    margin:20px auto;
+    font-size: 40px;
+    border-bottom: 5px solid black;
+}
+.msg-container{
+    padding: 20px;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    /* background-color: rgb(244,244,244); */
+}
+.welcome-msg{
+    padding: 30px;
+    margin:10px 40px;
+    font-size: 30px;
+    flex-basis: 600px;
+    line-height: 35px;
+    /* border: 2px solid black; */
+}
+.welcome-msg > h1{
+    font-size: 50px;
+    color: green;
+    font-weight: bolder;
+}
+.welcome-img{
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+.welcome-img > img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+
+/* Project Conclusion */
+.conclusion-para{
+    background-color: black;
+    color: #fff;
+    display: block;
+    width: 80vw;
+    margin:auto;
+    font-size: 25px;
+    padding: 20px;
+    line-height: 40px;
+    border-radius: 20px;
+}

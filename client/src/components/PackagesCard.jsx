@@ -3,12 +3,17 @@ import './PackagesCard.css'; // Import the CSS file for styling
 
 const PackagesCard = () => {
   return (
-    <div className="card">
-      <img src="images/npmLogo.png" alt="Logo" className="card-logo" />
-      <h2 className="card-heading">Package Name</h2>
-      <a href="/" className="card-link">
-        npm link
-      </a>
+    <div className="packages-card">
+      <div className='upper-half'>
+        <img src='/images/npmLogo.png' className='package-image'></img>
+      </div>
+      <div className='lower-half'>
+        <p className='package-name'>Package Name</p>
+        <p className="package-link">
+          npm install express
+        </p>
+        <button className='packages-btn'>Documentation</button>
+      </div>
     </div>
   );
 };

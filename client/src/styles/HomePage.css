@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(35, 188, 157);
-    justify-content: space-around;
     align-items: center;
     padding: 40px;
     height: 40vh;
@@ -22,4 +21,17 @@
     font-size: 30px;
     color: white;
     font-family: cursive;
+}
+.packages-section{
+    margin: 30px 10px;
+}
+.npm-cards{
+    display: flex;
+    justify-content: space-between;
+}
+.packages-heading{
+    display:block;
+    width:fit-content;
+    margin:20px auto;
+    border-bottom: 5px solid black;
 }
